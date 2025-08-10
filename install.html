@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/assets/favicon.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Cookie Banner Blocker - Browse without Cookies!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/install.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2E9SPPVJFL"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-2E9SPPVJFL');
+    </script>
+</head>
+<body>
+    <div class="content">
+        <div class="message" id="msg-container"></div>
+    </div>
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="/" class="logo">
+                        <div class="logo-text" style="color: white;">Cookie<span>Blocker</span></div>
+                    </a>
+                    <p style="margin: 20px 0; color: #aaa;">Block annoying cookie banners and enjoy a cleaner, faster web experience.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#download">Download</a></li>
+                        <li><a href="https://itsmarian.is-a.dev/#contact" target="_blank">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://cookiebannerblocker.itsmarian.is-a.dev/">Documentation</a></li>
+                        <li><a href="https://github.com/itsmarianmc/CookieBannerBlocker">GitHub Repository</a></li>
+                        <li><a href="https://github.com/itsmarianmc/CookieBannerBlocker/issues">Support Forum</a></li>
+                        <li><a href="https://github.com/itsmarianmc/CookieBannerBlocker/releases">Changelog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-envelope"></i> business.itsmarian@gmail.com</li>
+                        <li><i class="fab fa-github"></i> github.com/itsmarianmc</li>
+                        <li><i class="fas fa-globe"></i> itsmarian.is-a.dev</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p id="notice" style="font-size: 12px;"></p>
+                <p>&copy; 2023 Cookie Banner Blocker. A project by itsmarian. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const msgContainer = document.getElementById('msg-container');
+            const urlParams = new URLSearchParams(window.location.search);
+            
+            if (urlParams.has('install') && 
+                urlParams.get('install') === 'success' &&
+                urlParams.has('version') && 
+                urlParams.has('origin_src')) {
+                
+                const version = urlParams.get('version');
+                const chromeRuntimeId = urlParams.get('chrome-runtime-id');
+                const originSrc = urlParams.get('origin_src');
+
+                document.getElementById('notice').innerText = `Installed Version: ${version} | Chrome Runtime ID: ${chromeRuntimeId}`;
+                
+                msgContainer.className = 'message success-message';
+                msgContainer.innerHTML = `
+                    <div class="message-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h2 class="message-title">Installation Successful!</h2>
+                    <div class="message-content">
+                        <p>Cookie Banner Blocker v${version} has been successfully installed.</p>
+                        <p>You can now browse without annoying cookie banners!</p>
+                    </div>
+                    <div class="message-actions">
+                        <a href="/" class="action-button btn-primary">Visit Website</a>
+                        <a href="https://github.com/itsmarianmc/CookieBannerBlocker" class="action-button btn-outline">GitHub Repository</a>
+                    </div>
+                `;
+            } else if (urlParams.has('throw') && urlParams.get('throw') === 'error') {
+                const errorType = urlParams.get('error-type') || 'Unknown Error';
+                const errorDesc = urlParams.get('error_description') || 'An unexpected error occurred.';
+                const actions = urlParams.get('actions') || 'Please try again later.';
+                
+                msgContainer.className = 'message error-message';
+                msgContainer.innerHTML = `
+                    <div class="message-icon">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <h2 class="message-title">Error: ${errorType}</h2>
+                    <div class="message-content">
+                        <p>${decodeURIComponent(errorDesc)}</p>
+                        <p><strong>Recommended actions:</strong> ${decodeURIComponent(actions)}</p>
+                    </div>
+                    <div class="message-actions">
+                        <a href="https://github.com/itsmarianmc/CookieBannerBlocker/issues" class="action-button btn-primary">Report Issue</a>
+                        <a href="https://itsmarian.is-a.dev/#contact" class="action-button btn-outline">Contact Support</a>
+                    </div>
+                `;
+            } else {
+                msgContainer.className = 'message';
+                msgContainer.innerHTML = `
+                    <div class="message-icon">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                    <h2 class="message-title">CookieBannerBlocker</h2>
+                    <div class="message-content">
+                        <p>Browse Without Annoying Cookie Banners</p>
+                        <p>Block cookie consent notices on every website and enjoy a cleaner, faster, distraction-free web experience.</p>
+                    </div>
+                    <div class="message-actions">
+                        <a href="https://github.com/itsmarianmc/CookieBannerBlocker/releases" class="action-button btn-primary">
+                            <i class="fas fa-download"></i>
+                            Download Extension
+                        </a>
+                    </div>
+                `;
+            }
+        });
+    </script>
+</body>
+</html>
