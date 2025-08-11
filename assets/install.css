@@ -25,6 +25,19 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+.linkout {
+	color: var(--primary);
+}
+
+.nodecoration {
+	text-decoration: none;
+	color: inherit;
+}
+
+.nodecoration:hover {
+	text-decoration: underline;
+}
+
 .content {
     align-items: center;
     background-color: var(--dark);

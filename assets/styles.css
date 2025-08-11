@@ -39,6 +39,19 @@ h6 {
 	line-height: 1.2;
 }
 
+.linkout {
+	color: var(--primary);
+}
+
+.nodecoration {
+	text-decoration: none;
+	color: inherit;
+}
+
+.nodecoration:hover {
+	text-decoration: underline;
+}
+
 .container {
 	width: 100%;
 	max-width: 1200px;
