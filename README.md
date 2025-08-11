@@ -2,7 +2,7 @@
 <p align="center">Block cookie consent notices on every website and enjoy a cleaner, faster, distraction-free web experience.</p>
 
 <p align="center">
-	<img src="https://itsmarian.is-a.dev/CookieBannerBlocker/assets/index-hero.jpeg" alt="CookieBannerBlocker Hero Image" style="width:100%; height:auto;">
+	<img src="assets/previews/preview-google-censored-strike.png" alt="CookieBannerBlocker Hero Image" style="width:100%; height:auto;">
 </p>
 
 <h1></h1>
@@ -33,52 +33,56 @@
 <h3>Features:</h3>
 <ul>
 	<li>
-		<strong>Automatic Blocking</strong>
+		<strong>Automatic Blocking:</strong>
 		Detects and blocks cookie banners automatically on all visited websites
 	</li>
 	<li>
-		<strong>Faster Loading</strong>
+		<strong>Faster Loading:</strong>
 		Improves website loading times by blocking unnecessary banner scripts
 	</li>
 	<li>
-		<strong>Privacy Focused</strong>
+		<strong>Privacy Focused:</strong>
 		Protects your privacy without compromising website functionality
 	</li>
 	<li>
-		<strong>Custom Whitelist</strong>
+		<strong>Custom Whitelist:</strong>
 		Add specific websites to your whitelist if you want to see cookie banners
 	</li>
 	<li>
-		<strong>Zero Configuration</strong>
+		<strong>Zero Configuration:</strong>
 		Works immediately after installation with no setup required
 	</li>
 	<li>
-		<strong>100% Free</strong>
+		<strong>100% Free:</strong>
 		Fully functional with no hidden costs or subscriptions
 	</li>
 	<li>
-		<strong>Wide Compatibility</strong>
+		<strong>Wide Compatibility:</strong>
 		Supports all major cookie banner systems (OneTrust, Cookiebot, Quantcast, etc.)
 	</li>
 	<li>
-		<strong>Open Source</strong>
+		<strong>Open Source:</strong>
 		Transparent codebase available on GitHub for inspection and contributions
 	</li>
 	<li>
-		<strong>Regular Updates</strong>
+		<strong>Regular Updates:</strong>
 		Continuously improved with new features and compatibility fixes
 	</li>
 	<li>
-		<strong>No Data Collection</strong>
+		<strong>No Data Collection:</strong>
 		Doesn't collect or transmit any user browsing data
 	</li>
 	<li>
-		<strong>Browser Compatibility</strong>
+		<strong>Browser Compatibility:</strong>
 		Works with all Chromium-based browsers (Chrome, Edge, Brave, etc.)
 	</li>
 	<li>
-		<strong>Lightweight</strong>
+		<strong>Lightweight:</strong>
 		Minimal performance impact with small memory footprint
+	</li>
+	<li>
+		<strong>Open Source:</strong>
+		Available on GitHub for anyone to inspect, modify, and contribute to the codebase.
 	</li>
 </ul>
 
@@ -179,7 +183,7 @@
 		</ul>
 	</details>
 	<div>
-		<p>Still have questions? <a href="https://itsmarian.is-a.dev/#contact">contact me</a> or <a href="https://github.com/itsmarianmc/CookieBannerBlocker/issues">open an issue on GitHub</a>.</p>
+		<p>Still have questions? <a href="https://itsmarian.is-a.dev/#contact">Contact me</a> or <a href="https://github.com/itsmarianmc/CookieBannerBlocker/issues">open an issue on GitHub</a>.</p>
 	</div>
 </section>
 

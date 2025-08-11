@@ -7,18 +7,19 @@ window.addEventListener('scroll', function() {
 	}
 });
 
-const menuToggle = document.querySelector('.menu-toggle');
 const menu = document.getElementById('mobile-menu');
 const navLinks = document.querySelector('.nav-links');
 
-menuToggle.addEventListener('click', function() {
-    if (navLinks.classList.contains('active')) {
-        navLinks.classList.remove('active');
-        menu.innerHTML = '<i class="fas fa-bars"></i>';
-    } else {
-	    navLinks.classList.toggle('active');
-        menu.innerHTML = '<i class="fas fa-times"></i>';
-    }
+menu.addEventListener('click', () => {
+	const isActive = menu.classList.contains('active');
+
+	if (isActive) {
+		menu.classList.remove('active');
+		navLinks.classList.remove('active');
+	} else {
+		menu.classList.add('active');
+		navLinks.classList.add('active');
+	}
 });
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -31,6 +32,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 		const targetElement = document.querySelector(targetId);
 		if (targetElement) {
 			navLinks.classList.remove('active');
+			menu.classList.remove('active');
 
 			window.scrollTo({
 				top: targetElement.offsetTop - 80,
