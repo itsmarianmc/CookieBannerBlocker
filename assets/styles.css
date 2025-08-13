@@ -6,6 +6,7 @@
     --dark: #23272f;
     --dark-head: #191b1f;
     --light: #f8f9fa;
+	--white: #ffffff;
     --gray: #b0b8c1;
     --success: #4cc9f0;
     --transition: all 0.3s ease;
@@ -251,7 +252,7 @@ section {
 	width: 70px;
 	height: 70px;
 	background: var(--primary);
-	color: white;
+	color: var(--white);
 	border-radius: 50%;
 	display: flex;
 	align-items: center;
@@ -268,7 +269,7 @@ section {
 
 .cta {
 	background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-	color: white;
+	color: var(--white);
 	text-align: center;
 	padding: 100px 0;
 }
@@ -345,8 +346,17 @@ footer {
 }
 
 .footer-links a:hover {
-	color: white;
+	color: var(--white);
 	padding-left: 5px;
+}
+
+.footer-links.lr a {
+	color: var(--white);
+}
+
+.footer-links.lr a:hover {
+	color: var(--white);
+	padding-left: 0;
 }
 
 .social-links {
@@ -362,7 +372,7 @@ footer {
 	width: 40px;
 	height: 40px;
 	background: rgba(255, 255, 255, 0.1);
-	color: white;
+	color: var(--white);
 	border-radius: 50%;
 	transition: var(--transition);
 }
