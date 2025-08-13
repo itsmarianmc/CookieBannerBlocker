@@ -121,7 +121,7 @@
 			<li>Core website functionality remains unaffected</li>
 			<li>Some sites may require cookie consent for certain features</li>
 			<li>You can whitelist sites that require cookie consent</li>
-			<li>Continuous testing ensures compatibility</li>
+			<li>If you experience any problems related to this extension <a href="https://itsmarian.is-a.dev/#contact">contact me</a></li>
 		</ul>
 	</details>
 	<details>
@@ -130,9 +130,10 @@
 		</summary>
 		<p>Whitelisting is simple:</p>
 		<ol>
-            <li>Open the extension folder</li>
-            <li>Open the "contentScript.js" Script in an editor</li>
-            <li>Add the domain you wish to whitelist in the "IGNORE_DOMAINS" list</li>
+            <li>Open the extension via the "Extensions" Tab in your browser (top right)</li>
+            <li>Clickt on "Add to whitelist"</li>
+			<li>If you want to remove a website from the whitelist, click on "Remove from whitelist"</li>
+			<li>Reload the website to apply changes</li>
 		</ol>
 		<p>Whitelisted sites will show cookie banners normally.</p>
 	</details>
@@ -146,6 +147,7 @@
 			<li>No personal data tracking</li>
 			<li>No telemetry or analytics</li>
 			<li>Open source code for complete transparency</li>
+			=> If you have further questions about privacy, please read our <a href="legal/privacy.html">Privacy Policy</a>.</li>
 		</ul>
 	</details>
 	<details>
