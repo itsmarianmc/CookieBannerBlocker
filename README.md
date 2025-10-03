@@ -90,6 +90,18 @@
 	<h2>Frequently Asked Questions</h2>
 	<details>
 		<summary>
+			<h3>Are there known sites, which still show banners?</h3>
+		</summary>
+		<p>Yes there are a few, which whether require you to accept the cookies to login or to use other essential features on their sites. Known domains are:</p>
+		<ul>
+			<li>temu.com</li>
+			<li>login.microsoftonline.com</li>
+			<li>login.live.com</li>
+		</ul>
+		<p>If you still find other sites, please <a href="https://support.itsmarian.is-a.dev/?utm_origin=https://github.com/itsmarianmc/CookieBannerBlocker/&utm_page=CookieBannerBlockerAddOn&page_pos=faq-known-sites-footer">let me know</a>
+	</details>
+	<details>
+		<summary>
 			<h3>How does Cookie Banner Blocker work?</h3>
 		</summary>
 		<p>The extension automatically detects and hides cookie consent banners using:</p>
@@ -121,7 +133,7 @@
 			<li>Core website functionality remains unaffected</li>
 			<li>Some sites may require cookie consent for certain features</li>
 			<li>You can whitelist sites that require cookie consent</li>
-			<li>If you experience any problems related to this extension <a href="https://itsmarian.is-a.dev/#contact">contact me</a></li>
+			<li>If you experience any problems related to this extension <a href="https://support.itsmarian.is-a.dev/?utm_origin=https://github.com/itsmarianmc/CookieBannerBlocker/&utm_page=CookieBannerBlockerAddOn&page_pos=faq-website-functionality-contact">contact me</a></li>
 		</ul>
 	</details>
 	<details>
@@ -147,7 +159,7 @@
 			<li>No personal data tracking</li>
 			<li>No telemetry or analytics</li>
 			<li>Open source code for complete transparency</li>
-			=> If you have further questions about privacy, please read our <a href="legal/privacy.html">Privacy Policy</a>.</li>
+			=> If you have further questions about privacy, please read the <a href="https://cookiebannerblocker.itsmarian.is-a.dev/legal/privacy.html">Privacy Policy</a>.</li>
 		</ul>
 	</details>
 	<details>
@@ -166,7 +178,7 @@
 		<summary>
 			<h3>How often is the blocker updated?</h3>
 		</summary>
-		<p>We maintain regular update cycles:</p>
+		<p>I maintain regular update cycles:</p>
 		<ul>
 			<li>Manual updates when users report issues or I detect an error</li>
 			<li>Major version releases every 3-4 months</li>
@@ -179,13 +191,13 @@
 		</summary>
 		<p>Detection is possible but unlikely:</p>
 		<ul>
-			<li>We don't leave obvious traces of our presence</li>
+			<li>The addon doesn't leave obvious traces of its presence</li>
 			<li>Some sophisticated sites may detect hidden elements</li>
 			<li>Website owners can request whitelisting</li>
 		</ul>
 	</details>
 	<div>
-		<p>Still have questions? <a href="https://itsmarian.is-a.dev/#contact">Contact me</a> or <a href="https://github.com/itsmarianmc/CookieBannerBlocker/issues">open an issue on GitHub</a>.</p>
+		<p>Still have questions? <a href="https://support.itsmarian.is-a.dev/?utm_origin=https://github.com/itsmarianmc/CookieBannerBlocker/&utm_page=CookieBannerBlockerAddOn&page_pos=footer-still-questions">Contact me</a> or <a href="https://github.com/itsmarianmc/CookieBannerBlocker/issues">open an issue on GitHub</a>.</p>
 	</div>
 </section>
 

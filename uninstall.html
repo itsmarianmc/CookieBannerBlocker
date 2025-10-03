@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="assets/favicon.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Cookie Banner Blocker - Uninstall Feedback</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/install.css">
+    <link rel="stylesheet" href="assets/uninstall.css">
+</head>
+<body>
+    <div class="content">
+        <div class="feedback-form" id="feedbackForm">
+            <h1 class="form-title">I am sorry to see you go 😢</h1>
+            <p class="form-description">
+                Your feedback helps me improve Cookie Banner Blocker for everyone.<br>
+                Please tell me why you're uninstalling:
+            </p>
+            <form id="uninstallForm">
+                <input type="hidden" id="version" name="version" value="">
+
+                <div class="reasons-grid">
+                    <label class="reason-item">
+                        <input type="checkbox" name="reasons" value="not_working">
+                        <span class="reason-text">Not working properly</span>
+                    </label>
+                    <label class="reason-item">
+                        <input type="checkbox" name="reasons" value="too_many_banners">
+                        <span class="reason-text">Still seeing too many cookie banners</span>
+                    </label>
+                    <label class="reason-item">
+                        <input type="checkbox" name="reasons" value="performance">
+                        <span class="reason-text">Slows down browsing</span>
+                    </label>
+                    <label class="reason-item">
+                        <input type="checkbox" name="reasons" value="privacy">
+                        <span class="reason-text">Privacy concerns</span>
+                    </label>
+                    <label class="reason-item">
+                        <input type="checkbox" name="reasons" value="alternative">
+                        <span class="reason-text">Found a better alternative</span>
+                    </label>
+                    <label class="reason-item">
+                        <input type="checkbox" name="reasons" value="no_longer_needed">
+                        <span class="reason-text">No longer need it</span>
+                    </label>
+                    <label class="reason-item">
+                        <input type="checkbox" name="reasons" value="difficult_use">
+                        <span class="reason-text">Difficult to use</span>
+                    </label>
+                    <label class="reason-item">
+                        <input type="checkbox" name="reasons" value="other">
+                        <span class="reason-text">Other reason</span>
+                    </label>
+                </div>
+                <div class="textarea-group">
+                    <label for="comments">Additional comments (optional):</label>
+                    <textarea 
+                        id="comments" 
+                        name="comments" 
+                        placeholder="Please share any additional feedback or suggestions..."
+                    ></textarea>
+                </div>
+                <button type="submit" class="submit-btn" id="submitBtn">
+                    Submit Feedback
+                </button>
+                <div id="errorMessage" class="error-message hidden"></div>
+            </form>
+        </div>
+        <div class="thank-you-message hidden" id="thankYouMessage">
+            <div class="thank-you-icon">
+                <i class="fas fa-heart"></i>
+            </div>
+            <h2 class="form-title">Thank You! ❤️</h2>
+            <p class="form-description">
+                Your feedback has been received and will help us improve.<br>
+                We hope to see you again in the future!
+            </p>
+            <div class="message-actions">
+                <a href="https://github.com/itsmarianmc/CookieBannerBlocker" class="action-button btn-outline">
+                    Follow Updates on GitHub
+                </a>
+            </div>
+        </div>
+    </div>
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="/" class="logo">
+                        <div class="logo-text" style="color: white;">CookieBanner<span>Blocker</span></div>
+                    </a>
+                    <p style="margin: 20px 0; color: #aaa;">Thank you for trying Cookie Banner Blocker.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://itsmarian.is-a.dev/#contact" target="_blank">Contact</a></li>
+                        <li><a href="https://github.com/itsmarianmc/CookieBannerBlocker">GitHub</a></li>
+                        <li><a href="https://github.com/itsmarianmc/CookieBannerBlocker/issues">Report Issues</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://github.com/itsmarianmc/CookieBannerBlocker/releases">Changelog</a></li>
+                        <li><a href="https://cookiebannerblocker.itsmarian.is-a.dev/">Documentation</a></li>
+                        <li><a href="https://github.com/itsmarianmc/CookieBannerBlocker/discussions">Community</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <ul class="footer-links lr">
+                        <li><i class="fas fa-envelope"></i> business.itsmarian@gmail.com</li>
+                        <li><i class="fab fa-github"></i> github.com/itsmarianmc</li>
+                        <li><i class="fas fa-globe"></i> itsmarian.is-a.dev</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Cookie Banner Blocker via <a class="linkout nodecoration" href="https://github.com/itsmarianmc/">itsmarian</a></p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('uninstallForm');
+            const submitBtn = document.getElementById('submitBtn');
+            const errorMessage = document.getElementById('errorMessage');
+            const feedbackForm = document.getElementById('feedbackForm');
+            const thankYouMessage = document.getElementById('thankYouMessage');
+            const versionField = document.getElementById('version');
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const version = urlParams.get('version') || 'unknown';
+            versionField.value = version;
+
+            const BACKEND_URL = 'https://itsmarianmc-github.vercel.app/api/cookiebannerblocker/uninstall';
+
+            form.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                
+                const formData = new FormData(form);
+                const reasons = [];
+                const checkboxes = form.querySelectorAll('input[name="reasons"]:checked');
+                
+                checkboxes.forEach(checkbox => {
+                    reasons.push(checkbox.value);
+                });
+
+                const comments = formData.get('comments') || '';
+                const version = formData.get('version') || 'unknown';
+
+                if (reasons.length === 0) {
+                    showError('Please select at least one reason for uninstalling.');
+                    return;
+                }
+
+                const data = {
+                    reasons: reasons,
+                    comments: comments,
+                    version: version,
+                    timestamp: new Date().toISOString(),
+                    userAgent: navigator.userAgent,
+                    uninstallReason: 'user_uninstall'
+                };
+
+                await submitFeedback(data);
+            });
+
+            async function submitFeedback(data) {
+                try {
+                    submitBtn.disabled = true;
+                    submitBtn.textContent = 'Sending...';
+                    feedbackForm.classList.add('loading');
+                    errorMessage.classList.add('hidden');
+
+                    const response = await fetch(BACKEND_URL, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(data)
+                    });
+
+                    if (response.ok) {
+                        feedbackForm.classList.add('hidden');
+                        thankYouMessage.classList.remove('hidden');
+                    } else {
+                        throw new Error(`Server responded with status: ${response.status}`);
+                    }
+
+                } catch (error) {
+                    console.error('Error submitting feedback:', error);
+                    showError('Sorry, there was an error submitting your feedback. Please try again.');
+                } finally {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Submit Feedback';
+                    feedbackForm.classList.remove('loading');
+                }
+            }
+
+            function showError(message) {
+                errorMessage.textContent = message;
+                errorMessage.classList.remove('hidden');
+            }
+
+            document.getElementById('comments').addEventListener('input', function(e) {
+                const otherCheckbox = document.querySelector('input[value="other"]');
+                if (e.target.value.trim() !== '' && !otherCheckbox.checked) {
+                    otherCheckbox.checked = true;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
