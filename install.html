@@ -90,15 +90,15 @@
                     <h2 class="message-title">Installation Successful!</h2>
                     <div class="message-content">
                         <p>Cookie Banner Blocker v${version} has been successfully installed.</p>
-                        <p>You can now browse without annoying cookie banners!</p>
+                        <p>You can now browse without annoying cookie banners! Thanks for using CookieBannerBlocker!</p>
                     </div>
                     <div class="message-actions">
-                        <a href="/" class="action-button btn-primary">Visit Website</a>
-                        <a href="https://github.com/itsmarianmc/CookieBannerBlocker" class="action-button btn-outline">GitHub Repository</a>
+                        <a href="/" class="action-button btn-primary"><i class="fas fa-globe"></i>Visit Website</a>
+                        <a href="https://github.com/itsmarianmc/CookieBannerBlocker" class="action-button btn-outline"><i class="fa-brands fa-github"></i>GitHub Repository</a>
                     </div>
                 `;
             } else if (urlParams.has('throw') && urlParams.get('throw') === 'error') {
-                const errorType = urlParams.get('error-type') || 'Unknown Error';
+                const errorType = urlParams.get('error_type') || 'Unknown Error';
                 const errorDesc = urlParams.get('error_description') || 'An unexpected error occurred.';
                 const actions = urlParams.get('actions') || 'Please try again later.';
                 
@@ -113,8 +113,8 @@
                         <p><strong>Recommended actions:</strong> ${decodeURIComponent(actions)}</p>
                     </div>
                     <div class="message-actions">
-                        <a href="https://github.com/itsmarianmc/CookieBannerBlocker/issues" class="action-button btn-primary">Report Issue</a>
-                        <a href="https://itsmarian.is-a.dev/#contact" class="action-button btn-outline">Contact Support</a>
+                        <a href="https://github.com/itsmarianmc/CookieBannerBlocker/issues" class="action-button btn-primary error">Report Issue</a>
+                        <a href="https://itsmarian.is-a.dev/#contact" class="action-button btn-outline error">Contact Support</a>
                     </div>
                 `;
             } else {

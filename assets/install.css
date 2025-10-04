@@ -33,7 +33,7 @@ body {
     align-items: center;
     justify-content: center;
     padding: 2rem;
-    min-height: 80vh;
+    min-height: 100vh;
 }
 
 .message {
@@ -57,7 +57,7 @@ body {
     align-items: center;
     justify-content: center;
     margin: 0 auto 1.5rem;
-    color: var(--primary);
+    color: var(--text);
     font-size: 2rem;
 }
 
@@ -99,7 +99,7 @@ body {
 
 .btn-primary {
     background: var(--accent);
-    color: var(--primary);
+    color: var(--text);
 }
 
 .btn-primary:hover {
@@ -115,7 +115,7 @@ body {
 
 .btn-outline:hover {
     background: var(--accent);
-    color: var(--primary);
+    color: var(--text);
     transform: translateY(-2px);
 }
 
