@@ -1,14 +1,19 @@
-window.addEventListener('scroll', function() {
-	const header = document.querySelector('header');
-	if (window.scrollY > 50) {
-		header.classList.add('scrolled');
-	} else {
-		header.classList.remove('scrolled');
-	}
-});
-
 const menu = document.getElementById('mobile-menu');
 const navLinks = document.querySelector('.nav-links');
+
+const observerOptions = {
+	root: null,
+	rootMargin: '0px',
+	threshold: 0.1
+};
+
+const observer = new IntersectionObserver((entries) => {
+	entries.forEach(entry => {
+		if (entry.isIntersecting) {
+			entry.target.classList.add('animated');
+		}
+	});
+}, observerOptions);
 
 menu.addEventListener('click', () => {
 	const isActive = menu.classList.contains('active');
@@ -19,6 +24,15 @@ menu.addEventListener('click', () => {
 	} else {
 		menu.classList.add('active');
 		navLinks.classList.add('active');
+	}
+});
+
+window.addEventListener('scroll', function() {
+	const header = document.querySelector('header');
+	if (window.scrollY > 50) {
+		header.classList.add('scrolled');
+	} else {
+		header.classList.remove('scrolled');
 	}
 });
 
@@ -41,20 +55,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 		}
 	});
 });
-
-const observerOptions = {
-	root: null,
-	rootMargin: '0px',
-	threshold: 0.1
-};
-
-const observer = new IntersectionObserver((entries) => {
-	entries.forEach(entry => {
-		if (entry.isIntersecting) {
-			entry.target.classList.add('animated');
-		}
-	});
-}, observerOptions);
 
 document.querySelectorAll('.feature-card, .step, .testimonial-card').forEach(el => {
 	observer.observe(el);
@@ -86,12 +86,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	installBtn.addEventListener('click', function() {
 		animateClose();
-	});
-
-	overlay.addEventListener('click', function(e) {
-		if (e.target === this) {
-			animateClose();
-		}
 	});
 
 	function animateClose() {

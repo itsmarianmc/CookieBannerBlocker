@@ -142,7 +142,7 @@
 		</summary>
 		<p>Whitelisting is simple:</p>
 		<ol>
-            <li>Open the extension via the "Extensions" Tab in your browser (top right)</li>
+            <li>Open the extension by clicking on the top right of your screen</li>
             <li>Clickt on "Add to whitelist"</li>
 			<li>If you want to remove a website from the whitelist, click on "Remove from whitelist"</li>
 			<li>Reload the website to apply changes</li>
